@@ -1,0 +1,22 @@
+
+INSERT INTO `t_goods` VALUES(1, 'IPHONE13', 'IPHONE 13 128GB','/img/iPhone13.png', 'IPHONE 13 128GB', '5999.00', 1000),
+(2, 'IPHONE13PRO', 'IPHONE13 PRO 128GB', '/img/iPhone13Pro.png','IPHONE13 PRO 128GB','7999.00', 1000);
+
+INSERT INTO `t_seckill_goods` VALUES(1,1,'599',10,'2022-04-01 08:00:00','2022-04-01 09:00:00'),
+(2,2,'799',10,'2022-04-01 08:00:00','2022-04-01 09:00:00');
+
+SELECT
+ g.id,
+ g.goods_name,
+ g.goods_title,
+ g.goods_img,
+ g.goods_detail,
+ g.goods_price,
+ g.goods_stock,
+ sg.seckill_price,
+ sg.stock_count,
+ sg.start_date,
+ sg.end_date
+FROM
+ t_goods g
+ LEFT JOIN t_seckill_goods AS sg ON g.id = sg.goods_id

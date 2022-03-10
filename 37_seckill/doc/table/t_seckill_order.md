@@ -1,0 +1,8 @@
+
+CREATE TABLE `t_seckill_order`(
+	`id` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT 'seckill_order_id',
+	`user_id` BIGINT(20) DEFAULT NULL COMMENT 'user_id',
+	`order_id` BIGINT(20) DEFAULT NULL COMMENT 'order_id',
+	`goods_id` BIGINT(20) DEFAULT NULL COMMENT 'goods_id',
+PRIMARY KEY(`id`)
+)ENGINE = INNODB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
